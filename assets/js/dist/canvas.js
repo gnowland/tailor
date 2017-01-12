@@ -2857,6 +2857,7 @@ Carousel = Components.create( {
 			slidesToShow : 1,
 			slidesToScroll : 1,
 			autoplay : false,
+			autoplaySpeed : 3000,
 			arrows : false,
 			dots : true,
 			fade : false
@@ -2990,6 +2991,7 @@ Carousel = Components.create( {
 			slidesToScroll : 1,
 			initialSlide : 0,
 			autoplay : false,
+			autoplaySpeed : 3000,
 			arrows : false,
 			dots : false,
 			fade : false,
@@ -3043,6 +3045,7 @@ Carousel = Components.create( {
 		var currentIndex = this.$dots.filter( function() { return this.getAttribute( 'data-id' ) == currentSlide; } ).index();
 		var options = $.extend( {}, this.options, {
 			autoplay : false,
+			autoplaySpeed : 3000,
 			fade : false,
 			initialSlide : currentIndex
 		} );
@@ -6547,6 +6550,7 @@ require( './preview/css' );
 		var carousel = this;
 		var options = {
 			autoplay : '1' == atts.autoplay,
+			autoplaySpeed : atts.autoplay_speed,
 			arrows : '1' == atts.arrows,
 			dots : false,
 			fade : '1' == atts.fade && '1' == atts.items_per_row,
@@ -6574,6 +6578,7 @@ require( './preview/css' );
 		if ( 'carousel' == atts.layout ) {
 			options = {
 				autoplay : '1' == atts.autoplay,
+				autoplaySpeed : atts.autoplay_speed,
 				arrows : '1' == atts.arrows,
 				dots : '1' == atts.dots,
 				fade : ( '1' == atts.fade && '1' == atts.items_per_row ),
@@ -6586,6 +6591,7 @@ require( './preview/css' );
 		else if ( 'slideshow' == atts.layout ) {
 			options = {
 				autoplay : '1' == atts.autoplay,
+				autoplaySpeed : atts.autoplay_speed,
 				arrows : '1' == atts.arrows,
 				dots : false,
 				fade : true,
@@ -6628,6 +6634,7 @@ require( './preview/css' );
 		if ( 'carousel' == atts.layout ) {
 			options = {
 				autoplay : '1' == atts.autoplay,
+				autoplaySpeed : atts.autoplay_speed,
 				arrows : '1' == atts.arrows,
 				dots : '1' == atts.dots,
 				fade : ( '1' == atts.fade && '1' == atts.items_per_row ),
@@ -9115,6 +9122,7 @@ Slideshow = Components.create( {
             slidesToShow : 1,
             slidesToScroll : 1,
             autoplay : false,
+            autoplaySpeed : 3000,
             arrows : false,
             dots : false,
             fade : true
